@@ -11,7 +11,7 @@ function msg(message='매개변수가 넘어오지 않았습니다'){
 }
 msg();
 msg('msg->Hello !!'); 
-//계산기
+//계산기 
 const plus=function (x, y, ...args){
   let result = x + y ;
   for(let num of args){
@@ -22,4 +22,8 @@ const plus=function (x, y, ...args){
   let sum=plus(1,2);
   console.log(sum); 
   console.log(plus(1,2,3,4,5));
-  console.log(plus(1,2,3,4,5,6,7,8,9,10)); 
+  console.log(plus(1,2,3,4,5,6,7,8,9,10));
+
+  
+
+
