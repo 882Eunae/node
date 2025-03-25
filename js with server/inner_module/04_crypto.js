@@ -8,3 +8,13 @@ let encData
            .update(data)   //업데이트 
            .digest('base64');  //64bit로 출력
 console.log(encData);
+
+const data2='pw1289'; 
+let secret2='ajhskfhsdjkfhreuwkrkafgdskh';
+let encData2
+            =crypto.createHmac('sha512',secret) 
+                   .update(data2)
+                   .digest('base64');  
+console.log(encData2);
+
+

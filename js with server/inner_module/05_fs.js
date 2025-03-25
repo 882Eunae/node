@@ -17,3 +17,12 @@ fs.readFile('./sample.txt','utf-8',(err,result)=>{
   if(err) throw err; 
   console.log(result);
 }); 
+
+fs.writeFile('./test.txt',
+  '쓰기테스트',
+  'utf-8',
+  (err)=>{if(err){throw err; }
+      console.log('쓰기 테스트');
+  }
+); 
+

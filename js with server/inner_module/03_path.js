@@ -4,9 +4,8 @@ console.log(__dirname);  //
 
 path=require('path'); 
 
-console.log('폴더정보',
-           path.dirname(__filename)
-);
+console.log('폴더정보', path.dirname(__filename));
+
 console.log('실제파일명 : %s',
   path.basename(__filename)
 );

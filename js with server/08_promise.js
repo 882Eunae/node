@@ -14,7 +14,7 @@ let timeAsync=new Promise((resolve,reject)=>{
 });
 
 console.log(timeAsync);
-console.log('작업종료');
+//console.log('작업종료');
 
 timeAsync
 .then((success)=>{
