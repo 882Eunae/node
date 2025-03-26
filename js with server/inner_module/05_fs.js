@@ -9,8 +9,8 @@ fs.writeFile('./sample.txt',
     if(err){
       throw err;
     }
-    console.log('파일쓰기 완료 !');
-});
+     console.log('파일쓰기 완료 !');
+   });
 
 //result는 파일에서 읽어들인 데이터
 fs.readFile('./sample.txt','utf-8',(err,result)=>{
