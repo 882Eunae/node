@@ -17,6 +17,8 @@ const connectionPool = mariaDB.createPool({
 });
 
 
+
+
 const query = (alias, values) =>{
   return new Promise((resove,reject)=>{
     let executeSql=sqlList[alias];
