@@ -21,10 +21,14 @@ app.listen(5000, () => {
  경로에 값을 전달 | request.params 
 */
 //미들웨어 등록 
-// application/x-www-form-urlencoed
-app.use(express.urlencoded({
-    extended: false
-}));
+// application/x-www-form-urlencoedD
+
+app.use(express.urlencoded({ extended: false}));
+
+// let result='[1,2,3]'; 
+// result=JSON.parse(result);  //실제 서버가 배열로 인식하게 만드는 별도의 과정 :파싱 
+
+
 // application/json
 app.use(express.json());
 
