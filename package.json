@@ -1,0 +1,22 @@
+{
+  "name": "node",
+  "version": "1.0.0",
+  "main": "test.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/882Eunae/node.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/882Eunae/node/issues"
+  },
+  "homepage": "https://github.com/882Eunae/node#readme",
+  "description": "",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}

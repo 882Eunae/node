@@ -11,6 +11,7 @@ router.get('/customers',async (req,res)=>{
   res.send(custList);
 }); 
 
+
 //단건조회 :GET +'/customers/:id'
 router.get('/customers/:id',(req,res)=>{
   
