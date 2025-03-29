@@ -1,6 +1,7 @@
 // mapper/mapper.js 
 const mariaDB = require('mariadb/callback');
 const sqlList=require('./sql/customers.js');
+const empSql=require('./sql/employees.js');
 
 const connectionPool = mariaDB.createPool({
   //필수 
@@ -42,6 +43,26 @@ const query = (alias, values) =>{
   });
 }
 
+const empQuery = (alias, values) =>{
+  return new Promise((resove,reject)=>{
+    let executeSql=empSql[alias];
+    console.log(`sql:${executeSql}`);
+    connectionPool.query(executeSql,values,(err,result)=>{
+      if(err){
+        reject({err}); 
+      }else{
+        resove(result);
+      }
+    });
+
+  })
+  .catch(err =>{
+    console.log(err); 
+    return err;
+  });
+}
+
 module.exports = {
   query,
+  empQuery,
 }
