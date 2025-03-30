@@ -1,6 +1,6 @@
 // mapper/mapper.js 
 const mariaDB = require('mariadb/callback');
-const sqlList=require('./sql/customers.js');
+
 const empSql=require('./sql/employees.js');
 
 const connectionPool = mariaDB.createPool({
@@ -24,24 +24,6 @@ const connectionPool = mariaDB.createPool({
 
 
 
-const query = (alias, values) =>{
-  return new Promise((resove,reject)=>{
-    let executeSql=sqlList[alias];
-    console.log(`sql:${executeSql}`);
-    connectionPool.query(executeSql,values,(err,result)=>{
-      if(err){
-        reject({err}); 
-      }else{
-        resove(result);
-      }
-    });
-
-  })
-  .catch(err =>{
-    console.log(err); 
-    return err;
-  });
-}
 
 const empQuery = (alias, values) =>{
   return new Promise((resove,reject)=>{
@@ -63,6 +45,6 @@ const empQuery = (alias, values) =>{
 }
 
 module.exports = {
-  query,
+
   empQuery,
 }

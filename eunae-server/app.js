@@ -4,7 +4,7 @@ console.log(process.env);
 
 const express=require('express'); 
 const app=express(); 
-const custRouter=require('./router/customer_router.js');
+
 const empRouter=require('./router/employees_router.js');
 
 
@@ -21,5 +21,5 @@ app.get('/',(req,res)=>{
   res.send('Welcome eunaeServer !!');
 }) 
 
-app.use('/',custRouter);
+
 app.use('/',empRouter);
