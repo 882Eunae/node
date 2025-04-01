@@ -33,6 +33,7 @@ const converterAray=(target,list) =>{
 const updateEmp=async (empInfo,empId) =>{
     let updateEmp=[empInfo,empId]; //[객체,아이디]
     let result=await mariaDB.empQuery('updateEmp',updateEmp);    
+    return result;
 }
 
 module.exports={

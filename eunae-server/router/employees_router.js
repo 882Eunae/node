@@ -31,7 +31,7 @@ router.put('/employees/:id',async(req,res)=>{
     let empId=req.params.id; 
     let updateEmp=req.body; 
     let result=await empService.updateEmp(updateEmp,empId);
-    return result;
+    res.send(result);
 })
 
 
