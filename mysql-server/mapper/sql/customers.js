@@ -2,8 +2,8 @@
 //Table :customers; 
 
 const selectAll=
-`SELECT ID,NAME,EMAIL,PHONE,ADDRESS FROM CUSTOMERS`;  
-const selectById= `SELECT ID,NAME,EMAIL,PHONE,ADDRESS FROM CUSTOMERS where id = ?`;
+`SELECT id,name,email,phone,address FROM CUSTOMERS`;  
+const selectById= `SELECT id,name,email,phone,address FROM CUSTOMERS where id = ?`;
 const insertInfo=
 `INSERT INTO customers(name,email,phone,address)
 VALUES(?,?,?,?)`;  //배열 
